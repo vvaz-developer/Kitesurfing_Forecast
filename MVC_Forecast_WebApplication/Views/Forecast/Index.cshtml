@@ -1,0 +1,93 @@
+﻿@model IEnumerable<MVC_Forecast_WebApplication.Models.ForecastModels.Period>
+
+@{
+    ViewData["Title"] = "Forecast";
+}
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    th {
+        text-align: center;
+    }
+</style>
+
+<h1> KITESURFING FORECAST </h1>
+<h2> Huguenot Memorial Park | Jacksonville - Florida </h2>
+
+@*
+        <p>
+        <a asp-action="Create">Create New</a>
+        </p>
+*@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Record</th>
+            <th>Date</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Is Daytime</th>
+            <th>Temperature</th>
+            <th>Unit</th>
+            <th>Wind Speed</th>
+            <th>Kite Size</th>
+            <th>Wind Direction</th>
+            <th>Short Forecast</th>
+            <th>Chance of Rain</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="center-align">
+                    @Html.DisplayFor(modelItem => item.number)
+                </td>
+                <td class="center-align">
+                    @item.startTime.ToString("MM/dd/yyyy")
+                </td>
+                <td class="center-align">
+                    @item.startTime.ToString("hh:mm tt")
+                </td>
+                <td class="center-align">
+                    @item.endTime.ToString("hh:mm tt")
+                </td>
+                <td class="center-align">
+                    @item.isDaytime
+                </td>
+                <td class="center-align">
+                    @Html.DisplayFor(modelItem => item.temperature)
+                </td>
+                <td class="center-align">
+                    @Html.DisplayFor(modelItem => item.temperatureUnit)
+                </td>
+                <td class="center-align">
+                    @Html.DisplayFor(modelItem => item.windSpeed)
+                </td>
+                <td class="center-align">
+
+                    @if (item.windSpeed.ToString() == "13 mph")
+                    {
+                        <div>12 Meters</div>
+                    }
+
+                </td>
+                <td class="center-align">
+                    @Html.DisplayFor(modelItem => item.windDirection)
+                </td>
+                <td class="center-align">
+                    @Html.DisplayFor(modelItem => item.shortForecast)
+                </td>
+                <td class="center-align">
+                    @(item.probabilityOfPrecipitation.value + "%")
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

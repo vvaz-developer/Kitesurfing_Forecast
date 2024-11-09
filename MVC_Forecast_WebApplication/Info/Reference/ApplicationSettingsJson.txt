@@ -1,0 +1,2 @@
+﻿***** How to read values from appsettings.json *****
+https://stackoverflow.com/questions/46940710/getting-value-from-appsettings-json-in-net-core

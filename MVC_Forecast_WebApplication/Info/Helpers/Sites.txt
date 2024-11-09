@@ -1,0 +1,2 @@
+﻿***** Convert Json to C# Classes Online *****
+https://json2csharp.com/

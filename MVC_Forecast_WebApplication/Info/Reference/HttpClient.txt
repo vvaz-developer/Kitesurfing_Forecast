@@ -1,0 +1,2 @@
+﻿***** Http Client Factory *****
+Source: https://alexb72.medium.com/how-to-implement-httpclient-httpclientfactory-in-a-net-1cd9918a951d
