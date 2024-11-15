@@ -24,16 +24,33 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Kitesurfing">Kitesurfing</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Kitesurfing" asp-action="Index">Kitesurfing</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Forecast" asp-action="Index">Forecast</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Graphics</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Wind Speed</a>
+                                <a class="dropdown-item" href="#">Ocean Temperature</a>
+                                <a class="dropdown-item" href="#">Temperature</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">National Weather</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Market</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Buy</a>
+                                <a class="dropdown-item" href="#">Sell</a>
+                            </div>
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Product</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Privacy" asp-action="Index">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="About" asp-action="Index">About</a>
                         </li>
                     </ul>
                     <form class="d-flex">

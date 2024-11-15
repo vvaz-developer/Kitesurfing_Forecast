@@ -2,6 +2,16 @@
 
 @{
     ViewData["Title"] = "Forecast";
+
+    Pager pager = new Pager();
+
+    int pageNo = 0;
+
+    if (ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
 }
 <style>
     h1 {
@@ -20,11 +30,8 @@
 <h1> KITESURFING FORECAST </h1>
 <h2> Huguenot Memorial Park | Jacksonville - Florida </h2>
 
-@*
-        <p>
-        <a asp-action="Create">Create New</a>
-        </p>
-*@
+<partial name="_pager" model="@pager" />
+
 <table class="table">
     <thead>
         <tr>
@@ -74,7 +81,7 @@
 
                     @if (item.windSpeed.ToString() == "13 mph")
                     {
-                        <div>12 Meters</div>
+                        <div>12 meters</div>
                     }
 
                 </td>
@@ -91,3 +98,6 @@
         }
     </tbody>
 </table>
+
+<partial name="_pager" model="@pager" />
+
